@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - 301 </title>
+
+    <style>
+
+        * {
+            box-sizing:  border-box;
+            color: white;
+            font-family: 'Pacifico', cursive;
+            font-size: 28px;
+        }
+
+        body {
+            /* background-image: url('https://unsplash.com/photos/kz63JaDm9V4/download?ixid=MnwxMjA3fDB8MXxhbGx8MTU1fHx8fHx8Mnx8MTY1MDQxMTE3MQ&force=true&w=2400'); */
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            /* width: 400vh; */
+            height: auto;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            /* background-size: 100% 60%; */
+        }
+        .layout {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #nav {
+            flex-basis: 100%;
+            border-bottom: 1px solid #aaa;
+            padding: 40px;
+            color: whitesmoke;
+        }
+
+        #sidebar {
+            flex-basis: 45%;
+            border-right: 1px solid #aaa;
+            padding: 20px;
+            border-bottom: 1px solid #aaa;
+            color: whitesmoke;
+            height: 60vh;
+        }
+
+        #content {
+            flex-basis: 55%;
+            border: 1px solid #aaa;
+            padding: 20px;
+            border-bottom: 1px solid #aaa;
+            color: whitesmoke;
+        }
+
+        @media (max-width: 640px) {
+            #sidebar, #content {
+                flex-basis: 100%;
+                border-right: 0;
+            }
+        }
+
+        @media (max-width: 475px) {
+            #sidebar {
+                display: none;
+            }
+        }
+
+        @media (width: 715px) {
+            #sidebar, #content {
+                flex-basis: none;
+                border-right: none;
+                padding: none;
+            }
+
+            body p { 
+                text-align: center;
+                justify-content: center;
+                
+            }
+        }
+        /* @media (min-width: 1507px) {
+            #content {
+                padding: 100px;
+                flex-basis: 50%;
+                border-right: none;
+                /* border: 1px solid gray; */
+            }
+        } */
+
+        .myfooter {
+            text-align: center;
+            text-decoration: underline;
+            color: aqua;
+            bottom: -600px;
+            height: 50px;
+            width: 100%;
+            /* left: 0; */
+            /* margin-left: 50%; */
+            /* max-width: 60%; */
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            /* background-color: gra; */
+        }
+        .myfooter span {
+            color: aqua;
+            text-align: center;
+            word-spacing: 1em;
+        }
+
+        #nav h1 {
+            font-size: 50px;
+            text-shadow: 2px 2px 4px aqua;
+            color: rgba(0, 0, 0, 0)
+        }
+
+        #content  h3, iframe, #sidebar h3  {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        #sidebar img {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            background-size: contain;
+            width: 60vh;
+            height: 40vh;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+
+    <!--- Implemataion using Flexbox CSS-->
+    <div class="layout">
+        <div id="nav">
+            <center>
+                <h1>Cool Learning with Animation</h1>
+
+            </center>
+        </div>
+
+        <div id="sidebar">
+                    <h3>In Siding bar ? </h3>
+                    <img src="https://images.unsplash.com/photo-1650453560647-6b49208f7ed2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="My-FLower">
+        </div>
+
+        <div id="content">
+                 <h3>Watching Here? </h3>
+                 <center>
+                    <iframe width="500" height="300" src="https://www.youtube.com/embed/ibVDol1CPxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 </center>
+
+        </div>
+    </div> <br /> <br />
+
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi voluptatem exercitationem facere quaerat ut, at aperiam nostrum, officiis totam nihil doloremque deleniti aliquid nisi neque perferendis fugiat harum, voluptatibus beatae.
+        <br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ea magni velit, officia cumque, alias consectetur quasi facilis illum voluptatibus placeat vero earum quidem non. Adipisci, est magni. Vero, illo!
+    </p>    
+
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse beatae tenetur voluptate? Fuga omnis exercitationem, ut assumenda reiciendis, voluptates inventore ullam asperiores quo explicabo error illum eveniet aut, aspernatur cumque.
+    </p>
+
+
+
+
+    
+<footer>
+    <div class="myfooter"> 
+     <center>
+        <span style="padding: 20px; padding-bottom: 50px;"> Module-6 TASK  <sup>&copy;</sup>2022 </span>
+    </center>
+</div>
+
+</footer>
+</body>
+</html>

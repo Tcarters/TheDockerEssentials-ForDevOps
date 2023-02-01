@@ -1,0 +1,39 @@
+
+version: '3.3'
+
+services:
+   db: # 1st service
+    image: mysql:5.7
+
+    container_name: mysql_database
+    volumes:
+      - db_data:/var/lib/mysql # we are mounting a collecting the data of the mysql db in a local folder db_data
+    ports:
+     - "3305:3306"   
+    restart: always
+    environment:
+        MYSQL_ROOT_PASSWORD: root@wordpress
+        MYSQL_DATABASE: wordpress
+        MYSQL_USER: wordpress
+        MYSQL_PASSWORD: abc@123
+
+    wordpress: # 2nd service our Frontend   
+      depends_on: # create a relation with the 
+        - db
+      image: wordpress:latest
+      container_name: wd_frontend
+      volumes:
+        - wordpress_files:/var/www/html 
+      ports:
+        - "9000:80"
+      restart: always
+      environment:
+        WORDPRESS_DB_HOST: db:3306
+        WORDPRESS_DB_USER: wordpress
+        WORDPRESS_DB_PASSWORD: abc@123
+volumes:
+    wordpress_files:
+    db_data:
+ 
+
+# To run: docker-compose up -d in the current

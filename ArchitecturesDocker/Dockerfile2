@@ -1,0 +1,25 @@
+ARG VERSION=latest
+FROM redhat/ubi8:{VERSION}
+
+LABEL Creator: "tcdocker2021 Tedmund"
+
+RUN yum update && yum install -y curl \
+    && yum clean all 
+
+RUN mkdir /home/Codes
+
+ENV USER coder2023 
+ENV SHELL /bin/bash
+ENV LOGNAME coder2023
+
+CMD ["bash"]
+
+
+# To build this image: 
+##-->>               "docker build -t Imageubi8 . "
+
+# To create a container from The new image created:
+##-->>             " docker run -dit --name cont1 Imageubi8"
+
+#To execute the container:
+##-->>       " docker exec -it cont1 bash "
