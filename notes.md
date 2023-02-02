@@ -3,6 +3,7 @@
 - Containers are an abstraction at the Application layer that packages codes and dependecies together.
  
 -  Containers benefits:
+ 
  * Consume less storage and memory 
  * Easier and faster to ship
  * If they work on one machine; they work on all machines
@@ -10,12 +11,11 @@
  * Possible to eliminate data loss and downtime
 
 
-
 # Docker
 > Docker is an open platform for developers and system admins to build , ship and run containerized applications.
- Ex: Rocket 
+ - Ex: Rocket 
 
-Benefits:
+Benefits of Docker:
 - Most widely used for Containerized platform
 - Huge Community  support
 - Large amount of 3rd party application support
