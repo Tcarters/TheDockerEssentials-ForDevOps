@@ -1,3 +1,3 @@
 # DockerEssentials Learning
 
-A sample repo conatining mini project for Docker learners ..
+A sample repo containing mini projects for Docker learners, feel free 🥲 to update contents or updating ...
