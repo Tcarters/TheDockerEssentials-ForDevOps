@@ -2,7 +2,7 @@
 
 - Containers are an abstraction at the Application layer that packages codes and dependecies together.
  
--  Containers benefits:
+- Containers benefits:
  
  * Consume less storage and memory 
  * Easier and faster to ship
