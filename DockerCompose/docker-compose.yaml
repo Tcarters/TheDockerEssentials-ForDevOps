@@ -7,7 +7,7 @@ services:
     image: mysql:5.7
     container_name: mysql_db
     volumes:
-      - db_data:/var/lib/mysql # we are mounting a collecting the data of the mysql db in a local folder db_data
+      - db_data:/var/lib/mysql # Mounting the  collected  data of the mysql db in a local folder db_data
     ports:
      - "3305:3306"   
     restart: always
